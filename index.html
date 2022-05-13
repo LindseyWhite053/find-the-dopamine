@@ -1,48 +1,72 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Poppins:wght@100;200;400&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/8035757bfd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Find the Dopemine</title>
-        <link rel="stylesheet" type="text/css" href="./assets/css/bulma.min.css">
-        <script src="script.js"></script>
-    </head>
+    <title>Let's Be Happy!</title>
+</head>
+<body>
+  <h1> FIND THE DOPEMINE </h1>
+  <p class="heading"> <strong>"We could all use a little happiness."-Beau </strong></p>
+ 
+    <button class="fav"> <i class="fa-solid fa-heart"></i> Favorites </button>
+  
 
-    <body>
-        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="index.html" class="navbar-item">FIND THE DOPEMINE</a>
-                    <button class="button navbar-burger" data-target="navMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <div class="navbar-menu is-hoverable" id="navMenu">
-                    <div class="navbar-start">
-                        <a href="index.html" class="navbar-item">Home</a>
-                        <a href="about.html" class="navbar-item">about</a>
-                        <a href="Team.html" class="navbar-item">Team</a>
-                    </div>
-                    <div class="navbar-end">
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a href="#0" class="navbar-link">Take a chance if you Dare! 😈</a>
-                            <div class="navbar-dropdown is-boxed">
-                                <hr>
-                                <p class="has-text-danger">Roses are red Violets are blue look who snoozed it was you!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <p>We could all use a little happy.</p>
-        <!-- BUTTONS -->
-        <button type="button" class="button is-primary">Need a laugh?</button>
-        <button type="Meme" class="button is-primary">How about a meme?</button>
+ <div class="container"><div class="columns is-mobile is-centered">
+ <div class="card">
+  <div class="card-content">
+    <div class="content">
+     <p> <strong> Having a bad day? To get started, just choose whether you would like a <span> joke</span> or <span>meme</span> to make you feel better.</strong></p>
+     <button class="button btn1"> <strong>Press for Joke </strong></button>
+     <button class="button btn2"> <strong>Press for Meme </strong> </button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    
+   
+  
 
-    </body>
+
+
+  <div class="container part"><div class="columns is-mobile is-centered">
+    <div class="column is-half">
+      <p class="bd-notification is-primary">
+       
+      </p>
+    
+
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="./assets/images/happy.png" alt="Placeholder image" class="happy activeImg">
+      <audio src="./Minion Hehehe Sound Effect.mp3" class="enter"></audio>
+    </figure>
+  </div>
+  <footer>
+    <p class="foot">&copy; 2022. Michigan State University. All Rights Reserved.</p>
+    <p > Justin Peralta, Lindsey White, Beau Jackson, Keviana Mickens.</p>
+  </footer>
+  
+<script>
+  let happy = document.querySelector(".happy");
+
+let audioArr = document.getElementsByTagName("audio");
+console.log(audioArr)
+
+happy.addEventListener('mouseenter', ()=>{
+    audioArr[0].play()
+});
+
+</script>
+<script src="./assets/js/script.js"></script>
+</body>
 </html>

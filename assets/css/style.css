@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+html{
+    background-color: #fbf8cc;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150px;
+    
+}
+.heading{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1%;
+    margin-top: -2%;
+}
+
+.meme:hover {
+   
+    background-color:#fbf8cc ;
+   
+    
+}
+.button {
+    border:none;
+    outline: none;
+    background-color:#fbf8cc;
+left: 30%;
+
+
+   
+}
+.button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.1);
+}
+
+.part {
+    margin-top: 3%;
+}
+.joke{
+    background-color: #fbf8cc;
+   
+}
+span{
+ text-decoration: underline #000;
+}
+.happy:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.fa-heart{
+    color:red;
+}
+.fav{
+    top:0;
+    position: absolute;
+    right:0;
+    border:none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+footer {
+    margin-left: 10%;
+}
+.foot {
+    margin-left:5%;
+}
+.card{
+    top: -3%;
+}
+
+.btn2 {
+    margin-left: 4%;
+   
+}
+/* .activeImg{
+    opacity: 0;
+} */
