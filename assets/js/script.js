@@ -7,12 +7,12 @@ var jokeFind = function() {
 
 jokeFind();
 
-var memeFind = function() {
-    fetch('https://api.imgflip.com/get_memes')
-    .then(response => response.json())
-    .then(data => console.log(data));
-};
+// var memeFind = function() {
+//     fetch('https://api.imgflip.com/get_memes')
+//     .then(response => response.json())
+//     .then(data => console.log(data.data.memes[0]));
+// };
 // documentation found at https://imgflip.com/api
 
-memeFind();
+// memeFind();
 
