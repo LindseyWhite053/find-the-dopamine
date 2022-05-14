@@ -8,11 +8,12 @@ var jokeFind = function() {
 jokeFind();
 
 var memeFind = function() {
-    fetch('https://api.imgflip.com/get_memes')
+    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
     .then(data => console.log(data));
 };
 // documentation found at https://imgflip.com/api
 
 memeFind();
+
 
