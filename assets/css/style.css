@@ -69,7 +69,8 @@ span{
     cursor: pointer;
 }
 footer {
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    margin-top: 30px;
 }
 .foot {
     margin-left:5%;
@@ -82,6 +83,24 @@ footer {
     margin-left: 4%;
    
 }
+
+/* Tried have the text appear in a container box 
+the same size as the image but this did not work for responsiveness */
+/* .image {
+    width: 568px;
+    height: 443px;
+} */
+
+.content-return {
+    text-align: center;
+}
+
+.answer-button {
+    border:none;
+    outline: none;
+    background-color:#fbf8cc;
+}
+
 /* .activeImg{
     opacity: 0;
 } */
