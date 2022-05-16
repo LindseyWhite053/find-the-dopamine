@@ -53,16 +53,15 @@ var jokeFind = function() {
 
 
 
+var memeFind = function() {
+    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
+    .then(response => response.json())
+    .then(data => console.log(data));
+};
+// documentation found at https://github.com/D3vd/Meme_Api
 
 
-// var memeFind = function() {
-    //     fetch('https://api.imgflip.com/get_memes')
-    //     .then(response => response.json())
-    //     .then(data => console.log(data.data.memes[0]));
-    // };
-    // documentation found at https://imgflip.com/api
-    
-    // memeFind();
+memeFind();
     
     // let happy = document.querySelector(".happy");
     
@@ -73,4 +72,4 @@ var jokeFind = function() {
         //     audioArr[0].play()
         // });
         
-    document.querySelector("#joke-btn").addEventListener("click", jokeFind);
+   document.querySelector("#joke-btn").addEventListener("click", jokeFind);
