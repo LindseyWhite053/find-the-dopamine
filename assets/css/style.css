@@ -108,6 +108,8 @@ the same size as the image but this did not work for responsiveness */
 
 .content-return {
     text-align: center;
+    width: 500px;
+    height:600px; 
 }
 
 .answer-button {
