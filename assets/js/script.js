@@ -46,14 +46,27 @@ var jokeFind = function () {
 
 //documentation found at https://sv443.net/jokeapi/v2/
 
-var memeFind = function () {
-  fetch("https://meme-api.herokuapp.com/gimme/wholesomememes")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-};
-// documentation found at https://github.com/D3vd/Meme_Api
 
-memeFind();
+var memeFind = function() {
+    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        //remove minion img 
+        imageEl.innerHTML=""
+
+        //show meme img
+        var memeEl= document.createElement("img")
+        memeEl.setAttribute('src', data.url)
+        imageEl.appendChild(memeEl);
+        
+
+    })
+};
+// documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+
+document.querySelector("#meme-btn").addEventListener("click", memeFind);
 
 // let happy = document.querySelector(".happy");
 
