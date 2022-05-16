@@ -85,4 +85,4 @@ document.querySelector("#meme-btn").addEventListener("click", memeFind);
         //     audioArr[0].play()
         // });
         
-    document.querySelector("#joke-btn").addEventListener("click", jokeFind);
+   document.querySelector("#joke-btn").addEventListener("click", jokeFind);
