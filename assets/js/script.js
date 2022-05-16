@@ -55,12 +55,26 @@ var jokeFind = function() {
 var memeFind = function() {
     fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+        console.log(data);
+
+        //remove minion img 
+        imageEl.innerHTML=""
+
+        //show meme img
+        var memeEl= document.createElement("img")
+        memeEl.setAttribute('src', data.url)
+        imageEl.appendChild(memeEl);
+        
+
+    })
 };
-// documentation found at https://imgflip.com/api
+// documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+
+document.querySelector("#meme-btn").addEventListener("click", memeFind);
 
 
-     memeFind();
+
     
     // let happy = document.querySelector(".happy");
     
