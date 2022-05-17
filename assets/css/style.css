@@ -3,16 +3,22 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 html {
     background-color: #fbf8cc;
 }
 
+
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 135px;
+}
+
+p {
+    font-weight: bold;
 }
 
 .heading {
@@ -26,11 +32,15 @@ h1 {
     background-color: #fbf8cc;
 }
 
+.button-spacing {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .button {
     border: none;
     outline: none;
     background-color: #fbf8cc;
-    left: 30%;
 }
 
 .button:hover {
@@ -75,15 +85,6 @@ footer {
     bottom: 0;
 }
 
-.card {
-    top: -3%;
-}
-
-.btn2 {
-    margin-left: 4%;
-}
-
-
 .content-return {
     text-align: center;
     padding-bottom:200px;
@@ -93,3 +94,8 @@ footer {
     left: 0px;
 }
 
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 80px;
+    }
+}
