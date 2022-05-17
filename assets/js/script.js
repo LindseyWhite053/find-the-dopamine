@@ -1,8 +1,30 @@
 var imageEl = document.querySelector("#joke-image");
+var content = {
+  Media: "",
+  url: "",
+  Joke: "",
+  Setup: "", 
+  Punchline: ""
+}
 
+var savedContent = JSON.parse(localStorage.getItem ("existingContent")) || []
 
-var openFavorites = function (){
-    console.log("clicked");
+var saveFavorites = function (){
+  //define the values of the new favorite object using API data
+  var content = {
+    Media: data.type,
+    url: data.url,
+    Joke: data.joke,
+    Setup: data.setup, 
+    Punchline: data.delivery,
+  }
+
+  // push object into the array 
+  // savedContent.push(content)
+
+  // save to local storage
+
+    console.log(content);
 }
 
 
@@ -53,6 +75,8 @@ var jokeFind = function () {
       singleJokeEl.textContent = data.joke;
       jokeContainer.appendChild(singleJokeEl);
     });
+
+    
 };
 
 
@@ -71,8 +95,6 @@ var memeFind = function() {
         var memeEl= document.createElement("img")
         memeEl.setAttribute('src', data.url)
         imageEl.appendChild(memeEl);
-        
-
     })
 };
 
@@ -82,11 +104,10 @@ document.querySelector("#meme-btn").addEventListener("click", memeFind);
     let happy = document.querySelector(".happy");
     
     let audioArr = document.getElementsByTagName("audio");
-    console.log(audioArr)
 
-    /happy.addEventListener('mouseenter', ()=>{
+    happy.addEventListener('mouseenter', ()=>{
             audioArr[0].play()
          });
         
    document.querySelector("#joke-btn").addEventListener("click", jokeFind);
-   document.querySelector("#favoriteBtn").addEventListener("click", openFavorites);
+   document.querySelector("#favoriteBtn").addEventListener("click", saveFavorites);
