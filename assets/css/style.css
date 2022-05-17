@@ -69,6 +69,7 @@ span {
     color: red;
 }
 
+
 .fav {
     top: 0;
     position: absolute;
@@ -92,6 +93,12 @@ footer {
 
 .answer-button {
     left: 0px;
+}
+
+#favoriteBtn {
+    position:absolute;
+    bottom:5px;
+    right:5px;
 }
 
 @media only screen and (max-width: 768px) {
