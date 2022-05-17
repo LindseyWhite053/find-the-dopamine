@@ -76,13 +76,13 @@ document.querySelector("#meme-btn").addEventListener("click", memeFind);
 
 
     
-    // let happy = document.querySelector(".happy");
+    let happy = document.querySelector(".happy");
     
-    // let audioArr = document.getElementsByTagName("audio");
-    // console.log(audioArr)
+    let audioArr = document.getElementsByTagName("audio");
+    console.log(audioArr)
 
-    // happy.addEventListener('mouseenter', ()=>{
-        //     audioArr[0].play()
-        // });
+    /happy.addEventListener('mouseenter', ()=>{
+            audioArr[0].play()
+         });
         
    document.querySelector("#joke-btn").addEventListener("click", jokeFind);
