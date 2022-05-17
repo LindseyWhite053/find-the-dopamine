@@ -54,13 +54,13 @@ h1 {
 
 }
 
-span {
-    text-decoration: underline #000;
+.image {
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-.happy:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
+span {
+    text-decoration: underline #000;
 }
 
 .fa-heart {
@@ -80,6 +80,7 @@ span {
 footer {
     /* margin-left: 10%; */
     margin-top: 30px;
+    
 }
 
 .foot {
@@ -115,4 +116,3 @@ the same size as the image but this did not work for responsiveness */
 /* .activeImg{
     opacity: 0;
 } */
-
