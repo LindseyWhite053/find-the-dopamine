@@ -1,16 +1,56 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Find the Dopemine</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Poppins:wght@100;200;400&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/8035757bfd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-        
-        <script src="./assets/js/script.js"></script>
-    </body>
+    <title>Find the Dopamine</title>
+</head>
+
+<body>
+    <h1> FIND THE DOPAMINE </h1>
+    <p class="heading"> We could all use a little happiness. </p>
+    <!-- <button class="fav"> <i class="fa-solid fa-heart"></i> Favorites </button> -->
+    <div class="container">
+       <div class="columns is-mobile is-centered">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <p>Need a dopamine fix? Get a dose by choosing your happy button below.</p>
+                        <div class="button-spacing">
+                            <button id="joke-btn" class="button btn1"> Press for Joke</button>
+                            <button id="meme-btn" class="button btn2"> Press for Meme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container part">
+        <div class="columns is-mobile is-centered card-image image ">
+            <div class="column is-half-desktop is-full-tablet card">
+                <button id="favoriteBtn">Save 2 Favorites</button>
+                <div id="joke-image" class="image">
+                    <img src="./assets/images/happy.png" alt="Picture of yellow minion" class="happy activeImg">
+                    <audio src="./assets/audio/-6321576369884080512minion_hehehe_sound_effect_audio 3.mp4" class="enter"></audio>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2022. Michigan State University. All Rights Reserved.</p>
+        <p> Justin Peralta, Lindsey White, Beau Jackson, Keviana Brailsford-Mickens.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
