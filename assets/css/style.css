@@ -1,58 +1,46 @@
-/* On screens that are 992px wide or less, go from four columns to two columns */
-@media screen and (max-width: 992px) {
-    .column {
-      width: 50%;
-    }
-  }
-  
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-
-*{
+* {
     box-sizing: border-box;
     padding: 0;
-    margin:0;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-   
+
 }
 
-html{
+html {
     background-color: #fbf8cc;
 }
+
 h1 {
     text-align: center;
     font-weight: bold;
-    font-size: 150px;
-    
+    font-size: 135px;
+
 }
-.heading{
+
+.heading {
     text-align: center;
     font-size: 25px;
     margin-bottom: 1%;
     margin-top: -2%;
-    
+
 }
 
 .meme:hover {
-   
-    background-color:#fbf8cc ;
-   
-    
+
+    background-color: #fbf8cc;
+
+
 }
+
 .button {
-    border:none;
+    border: none;
     outline: none;
-    background-color:#fbf8cc;
-left: 30%;
+    background-color: #fbf8cc;
+    left: 30%;
 
-
-   
 }
-.button:hover{
+
+.button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.1);
 }
@@ -60,43 +48,52 @@ left: 30%;
 .part {
     margin-top: 3%;
 }
-.joke{
+
+.joke {
     background-color: #fbf8cc;
-   
+
 }
-span{
- text-decoration: underline #000;
+
+.image {
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
-.happy:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
+
+span {
+    text-decoration: underline #000;
 }
-.fa-heart{
-    color:red;
+
+.fa-heart {
+    color: red;
 }
-.fav{
-    top:0;
+
+.fav {
+    top: 0;
     position: absolute;
-    right:0;
-    border:none;
+    right: 0;
+    border: none;
     outline: none;
     background-color: #fff;
     cursor: pointer;
 }
+
 footer {
     /* margin-left: 10%; */
     margin-top: 30px;
+    
 }
+
 .foot {
-    margin-left:5%;
+    margin-left: 5%;
 }
-.card{
+
+.card {
     top: -3%;
 }
 
 .btn2 {
     margin-left: 4%;
-   
+
 }
 
 /* Tried have the text appear in a container box 
@@ -113,13 +110,11 @@ the same size as the image but this did not work for responsiveness */
 }
 
 .answer-button {
-    border:none;
+    border: none;
     outline: none;
-    background-color:#fbf8cc;
+    background-color: #fbf8cc;
 }
 
 /* .activeImg{
     opacity: 0;
 } */
-
-

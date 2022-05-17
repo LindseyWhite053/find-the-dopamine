@@ -44,9 +44,9 @@ var jokeFind = function () {
     });
 };
 
-//documentation found at https://sv443.net/jokeapi/v2/
 
 
+// documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
 var memeFind = function() {
     fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
@@ -64,17 +64,17 @@ var memeFind = function() {
 
     })
 };
-// documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+
 
 document.querySelector("#meme-btn").addEventListener("click", memeFind);
+    
+    let happy = document.querySelector(".happy");
+    
+    let audioArr = document.getElementsByTagName("audio");
+    console.log(audioArr)
 
-// let happy = document.querySelector(".happy");
-
-// let audioArr = document.getElementsByTagName("audio");
-// console.log(audioArr)
-
-// happy.addEventListener('mouseenter', ()=>{
-//     audioArr[0].play()
-// });
-
-document.querySelector("#joke-btn").addEventListener("click", jokeFind);
+    /happy.addEventListener('mouseenter', ()=>{
+            audioArr[0].play()
+         });
+        
+   document.querySelector("#joke-btn").addEventListener("click", jokeFind);
