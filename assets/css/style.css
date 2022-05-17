@@ -9,10 +9,15 @@ html {
     background-color: #fbf8cc;
 }
 
+
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 135px;
+}
+
+p {
+    font-weight: bold;
 }
 
 .heading {
@@ -26,11 +31,15 @@ h1 {
     background-color: #fbf8cc;
 }
 
+.button-spacing {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .button {
     border: none;
     outline: none;
     background-color: #fbf8cc;
-    left: 30%;
 }
 
 .button:hover {
@@ -74,15 +83,6 @@ footer {
     margin-top: 30px;
     bottom: 0;
 }
-
-.card {
-    top: -3%;
-}
-
-.btn2 {
-    margin-left: 4%;
-}
-
 
 .content-return {
     text-align: center;
