@@ -1,5 +1,11 @@
 var imageEl = document.querySelector("#joke-image");
 
+
+var openFavorites = function (){
+    console.log("clicked");
+}
+
+
 // pull a joke from the outside API found at https://sv443.net/jokeapi/v2/
 var jokeFind = function () {
   fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
@@ -83,3 +89,4 @@ document.querySelector("#meme-btn").addEventListener("click", memeFind);
          });
         
    document.querySelector("#joke-btn").addEventListener("click", jokeFind);
+   document.querySelector("#favoriteBtn").addEventListener("click", openFavorites);
