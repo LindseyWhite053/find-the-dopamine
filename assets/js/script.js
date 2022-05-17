@@ -9,11 +9,16 @@ var jokeFind = function () {
       //clear the current image
       imageEl.innerHTML = "";
 
+        //create a div container
+        var jokeContainer = document.createElement("div")
+        jokeContainer.className = "content-return"        
+        imageEl.appendChild(jokeContainer);
+
       if (data.type == "twopart") {
         // show the Joke setup
         var jokeEl = document.createElement("p");
         jokeEl.textContent = data.setup;
-        imageEl.appendChild(jokeEl);
+        jokeContainer.appendChild(jokeEl);
 
         //pull the data for the puchline
         var punchlineEl = document.createElement("p");
@@ -23,15 +28,15 @@ var jokeFind = function () {
 
         var punchlineBtn = document.createElement("button");
         punchlineBtn.addAttribute = "joke-btn";
-        punchlineBtn.className = "answer-button";
+        punchlineBtn.className = "answer-button button";
         punchlineBtn.textContent = "Punch";
 
-        imageEl.appendChild(punchlineBtn);
+        jokeContainer.appendChild(punchlineBtn);
 
         // function to show the punchline
         var getPunchline = function () {
           punchlineBtn.style.display = "none";
-          imageEl.appendChild(punchlineEl);
+          jokeContainer.appendChild(punchlineEl);
         };
 
         punchlineBtn.addEventListener("click", getPunchline);
@@ -40,7 +45,7 @@ var jokeFind = function () {
       // show the Joke setup
       var singleJokeEl = document.createElement("p");
       singleJokeEl.textContent = data.joke;
-      imageEl.appendChild(singleJokeEl);
+      jokeContainer.appendChild(singleJokeEl);
     });
 };
 

@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
 }
 
 html {
@@ -14,7 +13,6 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: 135px;
-
 }
 
 .heading {
@@ -22,14 +20,10 @@ h1 {
     font-size: 25px;
     margin-bottom: 1%;
     margin-top: -2%;
-
 }
 
 .meme:hover {
-
     background-color: #fbf8cc;
-
-
 }
 
 .button {
@@ -37,7 +31,6 @@ h1 {
     outline: none;
     background-color: #fbf8cc;
     left: 30%;
-
 }
 
 .button:hover {
@@ -51,7 +44,6 @@ h1 {
 
 .joke {
     background-color: #fbf8cc;
-
 }
 
 .image {
@@ -78,13 +70,9 @@ span {
 }
 
 footer {
-    /* margin-left: 10%; */
+    text-align: center;
     margin-top: 30px;
-    
-}
-
-.foot {
-    margin-left: 5%;
+    bottom: 0;
 }
 
 .card {
@@ -93,28 +81,15 @@ footer {
 
 .btn2 {
     margin-left: 4%;
-
 }
 
-/* Tried have the text appear in a container box 
-the same size as the image but this did not work for responsiveness */
-/* .image {
-    width: 568px;
-    height: 443px;
-} */
 
 .content-return {
     text-align: center;
-    width: 500px;
-    height:600px; 
+    padding-bottom:200px;
 }
 
 .answer-button {
-    border: none;
-    outline: none;
-    background-color: #fbf8cc;
+    left: 0px;
 }
 
-/* .activeImg{
-    opacity: 0;
-} */
