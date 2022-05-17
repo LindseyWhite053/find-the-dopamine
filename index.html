@@ -18,40 +18,38 @@
 
 <body>
     <h1> FIND THE DOPAMINE </h1>
-    <p class="heading"> <strong>We could all use a little happiness. </strong></p>
-    <button class="fav"> <i class="fa-solid fa-heart"></i> Favorites </button>
+    <p class="heading"> We could all use a little happiness. </p>
+    <!-- <button class="fav"> <i class="fa-solid fa-heart"></i> Favorites </button> -->
     <div class="container">
        <div class="columns is-mobile is-centered">
             <div class="card">
                 <div class="card-content">
                     <div class="content">
-                        <p> <strong> Need a dopamine fix? Get a dose of dopamine by choosing your happy button below.
-                        </p>
-                        <button id="joke-btn" class="button btn1"> <strong>Press for Joke </strong></button>
-                        <button id="meme-btn" class="button btn2"> <strong>Press for Meme </strong> </button>
+                        <p>Need a dopamine fix? Get a dose by choosing your happy button below.</p>
+                        <div class="button-spacing">
+                            <button id="joke-btn" class="button btn1"> Press for Joke</button>
+                            <button id="meme-btn" class="button btn2"> Press for Meme</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container part">
-        <div class="columns is-mobile is-centered">
-            <div class="column is-half">
-                <p class="bd-notification is-primary"></p>
-
-                <div class="card">
-                    <div class="card-image image">
-                        <div id="joke-image" class="image">
-                            <img src="./assets/images/happy.png" alt="Picture of yellow minion" class="happy activeImg">
-                            <audio src="./assets/audio/-6321576369884080512minion_hehehe_sound_effect_audio 3.mp4" class="enter"></audio>
-                        </div>
-                    </div>
+        <div class="columns is-mobile is-centered card-image image ">
+            <div class="column is-half card">
+                <div id="joke-image" class="image">
+                    <img src="./assets/images/happy.png" alt="Picture of yellow minion" class="happy activeImg">
+                    <audio src="./assets/audio/-6321576369884080512minion_hehehe_sound_effect_audio 3.mp4" class="enter"></audio>
                 </div>
-                <footer>
-                    <p>&copy; 2022. Michigan State University. All Rights Reserved.</p>
-                    <p> Justin Peralta, Lindsey White, Beau Jackson, Keviana Brailsford-Mickens.</p>
-                </footer>
-                <script src="./assets/js/script.js"></script>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2022. Michigan State University. All Rights Reserved.</p>
+        <p> Justin Peralta, Lindsey White, Beau Jackson, Keviana Brailsford-Mickens.</p>
+    </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
