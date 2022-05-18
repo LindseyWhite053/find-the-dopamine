@@ -16,6 +16,19 @@ var showFavorites = function() {
         var noticeEl = document.createElement("p");
         noticeEl.textContent = "No Favorites To Display"
         jokeContainer.appendChild(noticeEl);
+/*
+        window.addEventListener("load", function(){
+            setTimeout(
+                function open(event){
+                    document.querySelector(".popup").style.display = "block";
+                },
+                1000
+            )
+        });
+        document.querySelector("#close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        });
+*/
     }
     else {
 
