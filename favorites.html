@@ -6,31 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
-    <title>💛 Favorites Tab</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Favorites Tab</title>
 </head>
 <body style="text-align: center;">
+  <!-- <div class="popup">
+    <button id="close">&times;</button>
+    <h2>No favorites yet?</h2>
+    <p> There can never be too many.</p>
+    <a class=anchor href="./index.html">Get a Dose</a>
+</div> -->
   <!--Header-->
-  <div class="container is-max-widescreen">
-    <div class="notification is-warning">
-      <p class="text is-centered">Welcome to your favorites</p>
+  <div class="container is-max-widescreen box">
+    <!-- <div class="notification is-warning"> -->
+      <h1 class="text is-centered">Your Favorites</h1>
+      <!--go back to homepage -->
+      <a href="index.html" class="button">Click Here to go back to Jokes and Memes</a>
 
-      <!-- Hyperlink -->
-      <a href="index.html">Click Here to go back to Jokes and Memes</a>
+    <!-- </div> -->
+  </div>
 
-    </div>
+  <!-- where favorites will append -->
+<div class="container part">
+  <div class="columns is-mobile is-centered  image ">
+      <div class="column is-half-desktop is-full-tablet ">
+          <div id="joke-image" class="image">
+          </div>
+      </div>
   </div>
-<!--Hero section-->
-<section class="hero is-warning is-fullheight">
-  <div class="">
-    <div class="">
-      <p class="title">
-        Favorite Jokes and Memes 
-      </p>
-      <p class="subtitle">
-      </p>
-    </div>
-  </div>
-</section>
+</div>
+
+<script src="./assets/js/favorites.js"></script>
 
 </body>
 </html>

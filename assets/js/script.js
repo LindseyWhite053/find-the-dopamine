@@ -1,10 +1,14 @@
+let happy = document.querySelector(".happy");
+let audioArr = document.getElementsByTagName("audio");
 var imageEl = document.querySelector("#joke-image");
 
 
-var openFavorites = function (){
-    console.log("clicked");
-}
+// var savedContent = JSON.parse(localStorage.getItem ("existingContent")) || []
+var savedContent = []
+//create object base for staging
+var stagedContent = []
 
+var updatedContent = []
 
 // pull a joke from the outside API found at https://sv443.net/jokeapi/v2/
 var jokeFind = function () {
@@ -15,10 +19,10 @@ var jokeFind = function () {
       //clear the current image
       imageEl.innerHTML = "";
 
-        //create a div container
-        var jokeContainer = document.createElement("div")
-        jokeContainer.className = "content-return"        
-        imageEl.appendChild(jokeContainer);
+      //create a div container
+      var jokeContainer = document.createElement("div")
+      jokeContainer.className = "content-return"
+      imageEl.appendChild(jokeContainer);
 
       if (data.type == "twopart") {
         // show the Joke setup
@@ -33,7 +37,7 @@ var jokeFind = function () {
         //create a button to show the punchline
 
         var punchlineBtn = document.createElement("button");
-        punchlineBtn.addAttribute = "joke-btn";
+        punchlineBtn.setAttribute = "joke-btn";
         punchlineBtn.className = "answer-button button";
         punchlineBtn.textContent = "Punch";
 
@@ -46,47 +50,94 @@ var jokeFind = function () {
         };
 
         punchlineBtn.addEventListener("click", getPunchline);
-      }
+        
+          //create new object using API data
+          var newJoke = {
+          media: data.type,
+          setup: data.setup,
+          punchline: data.delivery
+          }
+          
+          //stage object for favoriting
+          stagedContent = []
+          stagedContent.push(newJoke)
 
-      // show the Joke setup
-      var singleJokeEl = document.createElement("p");
-      singleJokeEl.textContent = data.joke;
-      jokeContainer.appendChild(singleJokeEl);
-    });
+      }
+      else {
+
+        // show the Joke setup
+        var singleJokeEl = document.createElement("p");
+        singleJokeEl.textContent = data.joke;
+        jokeContainer.appendChild(singleJokeEl);
+  
+        //create new object using API data
+        var newContent = {
+          media: data.type,
+          joke: data.joke
+        }
+
+        //stage object for favoriting
+        stagedContent = []
+        stagedContent.push(newContent)
+        }
+   });
 };
 
-
-
 // documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
-var memeFind = function() {
-    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
+var memeFind = function () {
+  fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+      console.log(data);
 
-        //remove minion img 
-        imageEl.innerHTML=""
+      //remove minion img 
+      imageEl.innerHTML = ""
 
-        //show meme img
-        var memeEl= document.createElement("img")
-        memeEl.setAttribute('src', data.url)
-        imageEl.appendChild(memeEl);
-        
+      //show meme img
+      var memeEl = document.createElement("img")
+      memeEl.setAttribute('src', data.url)
+      imageEl.appendChild(memeEl);
 
+        //create new object using API data
+        var newMeme = {
+          media: "meme",
+          url: data.url
+        }
+
+        //stage object for favoriting
+        stagedContent = []
+        stagedContent.push(newMeme)
     })
 };
 
+var saveFavorites = function (){
+  console.log(stagedContent)
+  if (localStorage.length === 0){
+    console.log("nothing in local storage")
 
+    localStorage.setItem("existingContent",JSON.stringify(stagedContent));
+  }
+   else {
+     console.log("something in local storage")
+
+     //create new variable with the data in local storage
+    var savedContent = JSON.parse(localStorage.getItem ("existingContent"))
+    
+    // push staged object into the savedContent array 
+    var updatedContent = savedContent.concat(stagedContent);
+
+    // save to local storage
+    localStorage.setItem("existingContent",JSON.stringify(updatedContent));
+   } 
+}
+
+happy.addEventListener('mouseenter', ()=>{
+  audioArr[0].play()
+});
+
+document.querySelector("#joke-btn").addEventListener("click", jokeFind);
 document.querySelector("#meme-btn").addEventListener("click", memeFind);
-    
-    let happy = document.querySelector(".happy");
-    
-    let audioArr = document.getElementsByTagName("audio");
-    console.log(audioArr)
+document.querySelector("#favoriteBtn").addEventListener("click", saveFavorites);
 
-    /happy.addEventListener('mouseenter', ()=>{
-            audioArr[0].play()
-         });
-        
-   document.querySelector("#joke-btn").addEventListener("click", jokeFind);
-   document.querySelector("#favoriteBtn").addEventListener("click", openFavorites);
+
+

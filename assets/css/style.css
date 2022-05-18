@@ -10,11 +10,14 @@ html {
     background-color: #fbf8cc;
 }
 
+body {
+    margin-top: 20px; 
+}
 
 h1 {
     text-align: center;
     font-weight: bold;
-    font-size: 135px;
+    font-size: 100px;
 }
 
 p {
@@ -87,11 +90,72 @@ footer {
 
 .content-return {
     text-align: center;
-    padding-bottom:200px;
+    padding: 100px 50px;
 }
 
 .answer-button {
     left: 0px;
+    margin: 10px;
+}
+
+.favorite-return {
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+
+#favoriteBtn {
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    border: none;
+    background: none;
+    font-size: large;
+}
+
+#fav-notification {
+    visibility: hidden;
+}
+
+
+.popup{
+    background-color: #ffffff;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.anchor{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
 }
 
 @media only screen and (max-width: 768px) {
