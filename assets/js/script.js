@@ -3,6 +3,7 @@ let audioArr = document.getElementsByTagName("audio");
 var imageEl = document.querySelector("#joke-image");
 
 
+
 // var savedContent = JSON.parse(localStorage.getItem ("existingContent")) || []
 var savedContent = []
 //create object base for staging
@@ -112,7 +113,11 @@ var memeFind = function () {
 
 var saveFavorites = function (){
   console.log(stagedContent)
-  if (localStorage.length === 0){
+
+  if (!stagedContent) {
+    console.log("nothing to save")
+  }
+  else if (localStorage.length === 0){
     console.log("nothing in local storage")
 
     localStorage.setItem("existingContent",JSON.stringify(stagedContent));
