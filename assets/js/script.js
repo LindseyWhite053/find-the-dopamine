@@ -19,10 +19,10 @@ var jokeFind = function () {
       //clear the current image
       imageEl.innerHTML = "";
 
-        //create a div container
-        var jokeContainer = document.createElement("div")
-        jokeContainer.className = "content-return"        
-        imageEl.appendChild(jokeContainer);
+      //create a div container
+      var jokeContainer = document.createElement("div")
+      jokeContainer.className = "content-return"
+      imageEl.appendChild(jokeContainer);
 
       if (data.type == "twopart") {
         // show the Joke setup
@@ -84,19 +84,19 @@ var jokeFind = function () {
 };
 
 // documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
-var memeFind = function() {
-    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
+var memeFind = function () {
+  fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+      console.log(data);
 
-        //remove minion img 
-        imageEl.innerHTML=""
+      //remove minion img 
+      imageEl.innerHTML = ""
 
-        //show meme img
-        var memeEl= document.createElement("img")
-        memeEl.setAttribute('src', data.url)
-        imageEl.appendChild(memeEl);
+      //show meme img
+      var memeEl = document.createElement("img")
+      memeEl.setAttribute('src', data.url)
+      imageEl.appendChild(memeEl);
 
         //create new object using API data
         var newMeme = {
@@ -131,8 +131,6 @@ var saveFavorites = function (){
    } 
 }
 
-
-
 happy.addEventListener('mouseenter', ()=>{
   audioArr[0].play()
 });
@@ -140,3 +138,6 @@ happy.addEventListener('mouseenter', ()=>{
 document.querySelector("#joke-btn").addEventListener("click", jokeFind);
 document.querySelector("#meme-btn").addEventListener("click", memeFind);
 document.querySelector("#favoriteBtn").addEventListener("click", saveFavorites);
+
+
+
