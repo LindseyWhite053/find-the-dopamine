@@ -2,10 +2,13 @@ let happy = document.querySelector(".happy");
 let audioArr = document.getElementsByTagName("audio");
 var imageEl = document.querySelector("#joke-image");
 
-var savedContent = JSON.parse(localStorage.getItem ("existingContent")) || []
 
+// var savedContent = JSON.parse(localStorage.getItem ("existingContent")) || []
+var savedContent = []
 //create object base for staging
 var stagedContent = []
+
+var updatedContent = []
 
 // pull a joke from the outside API found at https://sv443.net/jokeapi/v2/
 var jokeFind = function () {
@@ -34,7 +37,7 @@ var jokeFind = function () {
         //create a button to show the punchline
 
         var punchlineBtn = document.createElement("button");
-        punchlineBtn.addAttribute = "joke-btn";
+        punchlineBtn.setAttribute = "joke-btn";
         punchlineBtn.className = "answer-button button";
         punchlineBtn.textContent = "Punch";
 
@@ -108,15 +111,24 @@ var memeFind = function() {
 };
 
 var saveFavorites = function (){
-  var savedContent = JSON.parse(localStorage.getItem ("existingContent"))
-  
-  // push staged object into the savedContent array 
-  var updatedContent = savedContent.concat(stagedContent);
+  console.log(stagedContent)
+  if (localStorage.length === 0){
+    console.log("nothing in local storage")
 
-  // save to local storage
-  localStorage.setItem("existingContent",JSON.stringify(updatedContent));
+    localStorage.setItem("existingContent",JSON.stringify(stagedContent));
+  }
+   else {
+     console.log("something in local storage")
 
-  console.log(updatedContent)
+     //create new variable with the data in local storage
+    var savedContent = JSON.parse(localStorage.getItem ("existingContent"))
+    
+    // push staged object into the savedContent array 
+    var updatedContent = savedContent.concat(stagedContent);
+
+    // save to local storage
+    localStorage.setItem("existingContent",JSON.stringify(updatedContent));
+   } 
 }
 
 
