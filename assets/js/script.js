@@ -1,8 +1,8 @@
 var imageEl = document.querySelector("#joke-image");
 
 
-var openFavorites = function (){
-    console.log("clicked");
+var openFavorites = function () {
+  console.log("clicked");
 }
 
 
@@ -15,10 +15,10 @@ var jokeFind = function () {
       //clear the current image
       imageEl.innerHTML = "";
 
-        //create a div container
-        var jokeContainer = document.createElement("div")
-        jokeContainer.className = "content-return"        
-        imageEl.appendChild(jokeContainer);
+      //create a div container
+      var jokeContainer = document.createElement("div")
+      jokeContainer.className = "content-return"
+      imageEl.appendChild(jokeContainer);
 
       if (data.type == "twopart") {
         // show the Joke setup
@@ -55,38 +55,37 @@ var jokeFind = function () {
     });
 };
 
-
-
 // documentation found at https://imgflip.com/api & https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
-var memeFind = function() {
-    fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
+var memeFind = function () {
+  fetch('https://meme-api.herokuapp.com/gimme/wholesomememes')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+      console.log(data);
 
-        //remove minion img 
-        imageEl.innerHTML=""
+      //remove minion img 
+      imageEl.innerHTML = ""
 
-        //show meme img
-        var memeEl= document.createElement("img")
-        memeEl.setAttribute('src', data.url)
-        imageEl.appendChild(memeEl);
-        
+      //show meme img
+      var memeEl = document.createElement("img")
+      memeEl.setAttribute('src', data.url)
+      imageEl.appendChild(memeEl);
+
 
     })
 };
 
 
 document.querySelector("#meme-btn").addEventListener("click", memeFind);
-    
-    let happy = document.querySelector(".happy");
-    
-    let audioArr = document.getElementsByTagName("audio");
-    console.log(audioArr)
 
-    /happy.addEventListener('mouseenter', ()=>{
-            audioArr[0].play()
-         });
-        
-   document.querySelector("#joke-btn").addEventListener("click", jokeFind);
-   document.querySelector("#favoriteBtn").addEventListener("click", openFavorites);
+let happy = document.querySelector(".happy");
+
+let audioArr = document.getElementsByTagName("audio");
+console.log(audioArr)
+
+  / happy.addEventListener('mouseenter', () => {
+    audioArr[0].play()
+  });
+
+
+document.querySelector("#joke-btn").addEventListener("click", jokeFind);
+document.querySelector("#favoriteBtn").addEventListener("click", openFavorites);
